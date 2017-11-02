@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Cerfrance{% endblock %}</title>
+        <style>
+            {% block stylesheets %}{% endblock %}
+            {% block stylesheetsheader %}{{include('header/header.css.twig')}}{% endblock %}
+            {% block stylesheetsMenu %}{{include('default/menuLat.css.twig')}}{% endblock %}
+        </style>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body class="grey lighten-2">
+        {% block header %}{{include('header/header.html.twig')}}{% endblock %}
+            <div class="row" style="margin: 0">
+                {% block menulateral %}{{include('default/menuLat.html.twig')}}{% endblock %}
+                <div class="col s10">
+
+                </div>
+            </div>
+    </body>
+</html>
